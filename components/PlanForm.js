@@ -11,7 +11,7 @@ export default function PlanForm({ action, plan, submitLabel }) {
   const p = plan ?? { estimate_basis: 'per_day', priority: '보통', area: '공부' };
 
   return (
-    <form action={formAction} className="plan-form">
+    <form action={formAction} className="plan-form glass">
       {editing && (
         <>
           <input type="hidden" name="id" value={p.id} />

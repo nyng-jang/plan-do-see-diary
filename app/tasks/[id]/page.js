@@ -31,7 +31,7 @@ export default async function TaskPage({ params, searchParams }) {
       <p><Link href="/tasks">← 할 일 목록</Link></p>
       {notice && <p className="ok" role="status">{notice}</p>}
 
-      <section className={`card current ${task.status === '완료' ? 'is-done' : ''}`}>
+      <section className={`card glass current ${task.status === '완료' ? 'is-done' : ''}`}>
         <div className="card-head">
           <span className={`status st-${task.status === '완료' ? 'done' : 'open'}`}>{task.status}</span>
           <span className={`pri pri-${task.priority}`}>{task.priority}</span>
