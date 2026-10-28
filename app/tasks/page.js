@@ -54,7 +54,7 @@ export default async function TasksPage({ searchParams }) {
         <h1>할 일</h1>
         {notice && <p className="ok" role="status">{String(notice)}</p>}
 
-        <form method="get" action="/tasks" className="filters glass" role="search">
+        <form method="get" action="/tasks" className="filters neu" role="search">
           <label className="wide">
             검색 <small>(할 일 이름·메모·태그)</small>
             <input type="search" name="q" defaultValue={f.q} maxLength={50} placeholder="예: 모의고사" />
@@ -106,7 +106,7 @@ export default async function TasksPage({ searchParams }) {
           </div>
         </form>
 
-        <div className="sort-rule glass" id="sort-rule">
+        <div className="sort-rule neu" id="sort-rule">
           <strong>정렬 기준 — {sort.name}:</strong> {sort.label}
           <br />
           <span className="muted">검색·거르기·정렬은 모두 서버의 데이터베이스에서 처리해요. 같은 조건이면 언제 열어도 같은 순서예요.</span>
@@ -126,7 +126,7 @@ export default async function TasksPage({ searchParams }) {
           {tasks.map((t, i) => {
             const due = formatDue(t.due_date, t.status, today);
             return (
-              <li key={t.id} id={`task-${t.id}`} className={`card glass task ${t.status === '완료' ? 'is-done' : ''}`}>
+              <li key={t.id} id={`task-${t.id}`} className={`card neu task ${t.status === '완료' ? 'is-done' : ''}`}>
                 <div className="card-head">
                   <span className="rank" title="정렬 순서">{i + 1}</span>
                   <span className={`status st-${t.status === '완료' ? 'done' : 'open'}`}>{t.status}</span>

@@ -9,7 +9,7 @@ export default function TaskForm({ action, task, plans, defaultPlanId, submitLab
   const t = task ?? { priority: '보통', plan_id: defaultPlanId ?? plans[0]?.id, tags: [] };
 
   return (
-    <form action={formAction} className="plan-form glass">
+    <form action={formAction} className="plan-form neu">
       {task && <input type="hidden" name="id" value={task.id} />}
       <label>
         어느 계획의 할 일인가요?

@@ -23,7 +23,7 @@ export default async function PlanPage({ params, searchParams }) {
       <p><Link href="/">← 내 계획</Link></p>
       {saved && <p className="ok" role="status">고친 내용을 저장했어요. 고치기 전 내용은 아래 이력에 남아 있어요.</p>}
 
-      <section className="card glass current">
+      <section className="card neu current">
         <div className="card-head">
           <span className={`pri pri-${plan.priority}`}>{plan.priority}</span>
           <span className="area">{plan.area}</span>

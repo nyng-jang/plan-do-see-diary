@@ -19,7 +19,7 @@ export default async function Home() {
         <ul className="plans">
           {plans.map((p) => (
             <li key={p.id}>
-              <Link href={`/plans/${p.id}`} className="card glass">
+              <Link href={`/plans/${p.id}`} className="card neu">
                 <div className="card-head">
                   <span className={`pri pri-${p.priority}`}>{p.priority}</span>
                   <span className="area">{p.area}</span>
